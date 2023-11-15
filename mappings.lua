@@ -32,6 +32,21 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    -- dealing with buffers
+    ["<TAB>"] = { ":bnext<cr>", desc = "Move to the next buffer" },
+    ["<S-TAB>"] = { ":bprevious<cr>", desc = "Move to the previous buffer" },
+    ["<leader>w"] = { ":bd<cr>", desc = "Close open buffer" },
+  },
+  i = {
+    -- Add keybindings for 'kj' and 'jk' to press the escape key
+    ["kj"] = { "<esc>", desc = "Press Escape" },
+    ["jk"] = { "<esc>", desc = "Press Escape" },
+  },
+  v = {
+    -- moving multiple lines up and down using K and J
+    ["K"] = { ":move '<-2<CR>gv-gv", desc = "Move selected lines up" },
+    ["J"] = { ":m '>+1<CR>gv-gv", desc = "Move selected lines down" },
   },
   t = {
     -- setting a mapping to false will disable it

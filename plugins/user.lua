@@ -9,4 +9,10 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- {
+  --   "easymotion/vim-easymotion",
+  --   keys = {
+  --     { "<leader>m", "<Plug>(easymotion-overwin-w)", desc = "Trigger easymotion" },
+  --   },
+  -- },
 }
