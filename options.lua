@@ -8,6 +8,8 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     timeoutlen = 500, -- timeout length to 500
+    tabstop = 4, -- 4 spaces for a tab
+    shiftwidth = 4, -- makes tabbing smarter, realizes you have 2 vs 4
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
