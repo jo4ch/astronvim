@@ -21,4 +21,16 @@ return {
   {
     "ggandor/leap.nvim",
   },
+  {
+    "rhysd/clever-f.vim",
+    event = "User AstroFile",
+  },
+  {
+    "itchyny/vim-cursorword",
+    event = "User AstroFile",
+  },
+  {
+    "terryma/vim-multiple-cursors",
+    event = "User AstroFile",
+  },
 }
