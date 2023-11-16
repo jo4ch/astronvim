@@ -15,4 +15,10 @@ return {
   --     { "<leader>m", "<Plug>(easymotion-overwin-w)", desc = "Trigger easymotion" },
   --   },
   -- },
+  {
+    "tpope/vim-repeat",
+  },
+  {
+    "ggandor/leap.nvim",
+  },
 }
