@@ -37,6 +37,14 @@ return {
     ["<TAB>"] = { ":bnext<cr>", desc = "Move to the next buffer" },
     ["<S-TAB>"] = { ":bprevious<cr>", desc = "Move to the previous buffer" },
     ["<leader>w"] = { ":bd<cr>", desc = "Close open buffer" },
+
+    -- ax-uploader script - axia specific
+    ["<leader>u"] = { ":!python3 ~/Dev/Ax/ax-uploader/__main__.py '%:p' n<enter>", desc = "[Axia] Quick upload" },
+    ["<leader>uu"] = {
+      ":split <BAR> term python3 ~/Dev/Ax/ax-uploader/__main__.py '%:p' n<enter>",
+      desc = "[Axia] Open upload window",
+    },
+    ["<leader>r"] = { ":!python3 ~/Dev/Ax/ax-uploader/__main__.py '%:p' y<enter>", desc = "[Axia] Strip template" },
   },
   i = {
     -- Add keybindings for 'kj' and 'jk' to press the escape key
