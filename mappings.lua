@@ -55,6 +55,14 @@ return {
     -- moving multiple lines up and down using K and J
     ["K"] = { ":move '<-2<CR>gv-gv", desc = "Move selected lines up" },
     ["J"] = { ":m '>+1<CR>gv-gv", desc = "Move selected lines down" },
+
+    -- temporary solution to overwrite 'x' not deleting selected text caused by the 'leap' plugin
+    ["x"] = {
+      function()
+        vim.cmd([[normal! d]])
+      end,
+      desc = "Delete selected text",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
