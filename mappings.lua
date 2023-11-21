@@ -40,7 +40,7 @@ return {
 
     -- ax-uploader script - axia specific
     ["<leader>u"] = { ":!python3 ~/Dev/Ax/ax-uploader/__main__.py '%:p' n<enter>", desc = "[Axia] Quick upload" },
-    ["<leader>uu"] = {
+    ["<leader>U"] = {
       ":split <BAR> term python3 ~/Dev/Ax/ax-uploader/__main__.py '%:p' n<enter>",
       desc = "[Axia] Open upload window",
     },
