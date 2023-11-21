@@ -1,0 +1,143 @@
+{
+  "xslt": {
+    "prefix": ["xslt"],
+    "body": [
+      "<?xml version=\"1.0\"?>",
+      "<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:utl=\"urn:ax_Utility\">",
+      "\t<xsl:output method=\"html\" encoding=\"utf-8\" />",
+      "",
+      "\t<!--",
+      "\t\t$1",
+      "\t-->",
+      "",
+      "\t<xsl:template match=\"/\">",
+      "\t\t$0",
+      "\t</xsl:template>",
+      "",
+      "</xsl:stylesheet>"
+    ],
+    "description": "XSLT Base Template"
+  },
+  "attr": {
+    "prefix": ["attr"],
+    "body": [
+      "<xsl:attribute name=\"$1\">$0</xsl:attribute>"
+    ],
+    "description": "XSLT Attribute"
+  },
+  "if": {
+    "prefix": ["if"],
+    "body": [
+      "<xsl:if test=\"$1\">$0</xsl:if>"
+    ],
+    "description": "XSLT If Statement"
+  },
+  "cw": {
+    "prefix": ["cw"],
+    "body": [
+      "<xsl:choose>",
+      "\t<xsl:when test=\"$1\">$2</xsl:when>",
+      "\t<xsl:otherwise>$3</xsl:otherwise>",
+      "</xsl:choose>"
+    ],
+    "description": "XSLT Choose/When Statement"
+  },
+  "callw": {
+    "prefix": ["callw"],
+    "body": [
+      "<xsl:call-template name=\"$1\">",
+      "\t<xsl:with-param name=\"$2\" select=\"$3\"/>",
+      "</xsl:call-template>"
+    ],
+    "description": "XSLT call-template"
+  },
+  "tm": {
+    "prefix": ["tm"],
+    "body": [
+      "<xsl:template name=\"$1\">",
+      "\t$0",
+      "</xsl:template>"
+    ],
+    "description": "XSLT New Template"
+  },
+  "wp": {
+    "prefix": ["wp"],
+    "body": [
+      "<xsl:with-param name=\"$1\" select=\"$2\" />"
+    ],
+    "description": "XSLT call-template Parameter"
+  },
+  "par": {
+    "prefix": ["par"],
+    "body": [
+      "<xsl:param name=\"$1\" />$0"
+    ],
+    "description": "XSLT Template Parameter"
+  },
+  "va": {
+    "prefix": ["va"],
+    "body": [
+      "<xsl:value-of select=\"$1\"/>$0"
+    ],
+    "description": "XSLT value-of (No disable-output-escaping)"
+  },
+  "val": {
+    "prefix": ["val"],
+    "body": [
+      "<xsl:value-of select=\"$1\"${2: disable-output-escaping=\"$3\"} />"
+    ],
+    "description": "XSLT value-of"
+  },
+  "for": {
+    "prefix": ["for"],
+    "body": [
+      "<xsl:for-each select=\"$1\">",
+      "\t$0",
+      "</xsl:for-each>"
+    ],
+    "description": "XSLT for-each loop"
+  },
+  "var": {
+    "prefix": ["var"],
+    "body": [
+      "<xsl:variable name=\"$1\" select=\"$2\" />"
+    ],
+    "description": "XSLT Self-Closing Variable"
+  },
+  "vari": {
+    "prefix": ["vari"],
+    "body": [
+      "<xsl:variable name=\"$1\">$0</xsl:variable>"
+    ],
+    "description": "XSLT Variable (Not Self-Closing)"
+  },
+  "wh": {
+    "prefix": ["wh"],
+    "body": [
+      "<xsl:when test=\"$1\">$0</xsl:when>"
+    ],
+    "description": "XSLT when Parameter for choose/when Statements"
+  },
+  "ot": {
+    "prefix": ["ot"],
+    "body": [
+      "<xsl:otherwise>$0</xsl:otherwise>"
+    ],
+    "description": "XSLT otherwise Parameter for choose/when Statements"
+  },
+  "ws": {
+    "prefix": ["ws"],
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<config>",
+      "\t<nnapp>yes</nnapp>",
+      "\t<rootnode>root</rootnode>",
+      "\t<uniqueid id=\"$1MemberID\">",
+      "\t\t<map>$2MID_*</map>",
+      "\t</uniqueid>",
+      "\t$0",
+      "</config>"
+    ],
+    "description": "WebService Template"
+  }
+}
