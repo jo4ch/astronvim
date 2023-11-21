@@ -33,4 +33,15 @@ return {
     "terryma/vim-multiple-cursors",
     event = "User AstroFile",
   },
+  {
+    "alvan/vim-closetag",
+    -- lazy = false
+    event = "User VeryLazy",
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "User AstroFile",
+  }
 }
