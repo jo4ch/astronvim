@@ -81,6 +81,5 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-    require("leap").add_default_mappings()
   end,
 }

@@ -37,7 +37,13 @@ return {
     ["<TAB>"] = { ":bnext<cr>", desc = "Move to the next buffer" },
     ["<S-TAB>"] = { ":bprevious<cr>", desc = "Move to the previous buffer" },
     ["<leader>w"] = { ":bd<cr>", desc = "Close open buffer" },
+
+    -- flash
+    ["<leader>s"] = { function() require("flash").jump() end, desc = "Flash Jump" },
+    ["<leader>st"] = { function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    ["<leader>sr"] = { function() require("flash").treesitter_search() end, desc = "Flash Treesitter Search" },
   },
+
   i = {
     -- Add keybindings for 'kj' and 'jk' to press the escape key
     ["kj"] = { "<esc>", desc = "Press Escape" },

@@ -19,9 +19,6 @@ return {
     "tpope/vim-repeat",
   },
   {
-    "ggandor/leap.nvim",
-  },
-  {
     "rhysd/clever-f.vim",
     event = "User AstroFile",
   },
@@ -32,5 +29,9 @@ return {
   {
     "terryma/vim-multiple-cursors",
     event = "User AstroFile",
+  },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
   },
 }
