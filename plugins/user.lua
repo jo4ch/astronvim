@@ -19,9 +19,6 @@ return {
     "tpope/vim-repeat",
   },
   {
-    "ggandor/leap.nvim",
-  },
-  {
     "rhysd/clever-f.vim",
     event = "User AstroFile",
   },
@@ -43,5 +40,9 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
     event = "User AstroFile",
+  },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
   }
 }

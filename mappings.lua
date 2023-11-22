@@ -45,7 +45,13 @@ return {
       desc = "[Axia] Open upload window",
     },
     ["<leader>r"] = { ":!python3 ~/Dev/Ax/ax-uploader/__main__.py '%:p' y<enter>", desc = "[Axia] Strip template" },
+
+    -- flash
+    ["<leader>s"] = { function() require("flash").jump() end, desc = "Flash Jump" },
+    ["<leader>st"] = { function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    ["<leader>sr"] = { function() require("flash").treesitter_search() end, desc = "Flash Treesitter Search" },
   },
+
   i = {
     -- Add keybindings for 'kj' and 'jk' to press the escape key
     ["kj"] = { "<esc>", desc = "Press Escape" },
