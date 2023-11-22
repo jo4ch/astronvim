@@ -27,7 +27,7 @@ return {
     event = "User AstroFile",
   },
   {
-    "terryma/vim-multiple-cursors",
+    "mg979/vim-visual-multi",
     event = "User AstroFile",
   },
   {
